@@ -1,0 +1,129 @@
+const Find_Digits=(num)=>
+{
+    let count=1;
+    for(let i=1;i<=num;i++)
+    {
+        num/=10;
+        count++;
+    }
+    return count;
+}
+console.log(Find_Digits(142578));
+
+//  2. Find The Five
+
+const Find_Five=(num)=>
+{
+    let st=num.toString();
+    let count = 0;
+    for(let i=0;i<st.length;i++)
+    {
+        if(st[i]==5)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+console.log(Find_Five(145255525));
+
+// 3. Find Sum
+
+const FindSum=(num)=>
+{
+    sum = 0;
+    for(i=0;i<=num;i++)
+    {
+        if(i%2==0)
+        {
+            sum+=i;
+        }
+    }
+    return sum;
+}
+console.log(FindSum(8));
+
+// 4. Find the sum of the digits os a givven number
+
+ const Number_Sum=(num)=>
+ {
+    let sum = 0;
+    let nu = num.toString();
+    for(i=1;i<=nu.length;i++)
+    {
+         sum+=i;
+    }
+    return sum;
+ }
+ console.log(Number_Sum(1234));
+
+//  5. Print the Odds. 
+
+const Print_Odd=(num)=>
+{
+    for(i=2;i<=num;i++)
+    {
+        if(i%2!=0 || i==2)
+        {
+            console.log(i);
+        }
+    }
+}
+Print_Odd(12);
+
+// 6. Print the pattern
+
+ let spc="";
+const Print_Pattern=(num)=>
+{
+    for(i=1;i<=num;i++)
+    {
+       
+        for(j=1;j<=i;j++)
+        {
+            spc+=" *";
+        }
+        spc+="\n";
+    }
+   return spc; 
+}
+console.log(Print_Pattern(5));
+
+// 7. Check whether a Number is a prime or not
+
+const Prime_Check=(num)=>
+{
+    for(let i=2;i<num;i++)
+    {
+        if(num%i===0)
+        {
+            return false;
+        }
+    }
+    return true;
+
+}
+console.log(Prime_Check(22));
+
+// 8. Print Numbers.
+
+const PrintNumber=(num)=>
+{
+    for(let i=1;i<=num;i++)
+    {
+        console.log(i);
+    }
+}
+PrintNumber(5);
+
+// 9. Print the Table
+
+const Print_Table=(num)=>
+{
+    for(let i=1;i<=10;i++)
+    {
+        // console.log(num, " X " , i, " =", num*i);
+        console.log(`${num} X ${i} = ${num*i}`);
+    }
+}
+Print_Table(3);
